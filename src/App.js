@@ -1,16 +1,13 @@
-import firebase from "@firebase/app-compat";
-import "firebase/auth";
-import "firebase/firestore";
+import React from "react";
+import Login from "./components/Login";
+import Chat from "./components/Chat";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "./firebase";
 
-//initualize firebase configuration
-firebase.initializeApp({
-  apiKey: "AIzaSyAubSwG_xuvhoaOS_FFFndkZEUldbX19Xs",
-  authDomain: "discord-clone-774b6.firebaseapp.com",
-  projectId: "discord-clone-774b6",
-  storageBucket: "discord-clone-774b6.appspot.com",
-  messagingSenderId: "216274464008",
-  appId: "1:216274464008:web:9f61ea274605f2f42110bd",
-});
-function App() {}
+const App = () => {
+  // checcking if user is already signed into google account
+  const [user] = useAuthState(auth);
+  return <div>{user ? <Chat /> : <Login />}</div>;
+};
 
 export default App;
