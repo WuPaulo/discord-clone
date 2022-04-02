@@ -8,8 +8,13 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <button onClick={googleSignIn}>Sign In</button>
+    <div className="loginContainers">
+      <div className="innerLoginContainer">
+        <img src="" alt="" />
+        <h1>React-Firebase Chat</h1>
+        <button onClick={googleSignIn}>Sign In</button>
+        <p>Use your Google Account</p>
+      </div>
     </div>
   );
 };
