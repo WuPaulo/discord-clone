@@ -21,6 +21,7 @@ function Chat() {
         <div className="chatWindow">
           {messages ? (
             messages.map(({ id, text, photoURL, uid, createdAt }) => (
+              // checking to see if its my own message
               <div
                 key={id}
                 className={`messages ${
@@ -29,7 +30,13 @@ function Chat() {
               >
                 <img src={photoURL} alt="" />
                 <div className="innerMessages">
-                  <h3>{firebase.auth().currentUser.displayName}</h3>
+                  <h3>
+                    {firebase.auth().currentUser.displayName}
+                    {"   "}
+                    <span>
+                      {new Date(createdAt?.toDate()).toLocaleString()}
+                    </span>
+                  </h3>
                   <p>{text}</p>
                 </div>
               </div>
