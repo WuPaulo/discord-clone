@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { auth, db } from "../firebase";
 import SendMessages from "./SendMessages";
+import firebase from "firebase/compat/app";
 function Chat() {
   const [messages, setMessages] = useState();
   useEffect(() => {
@@ -11,18 +12,34 @@ function Chat() {
       });
   }, []);
   return (
-    <div>
-      <button onClick={() => auth.signOut()}>Sign Out</button>
-      {messages ? (
-        messages.map(({ id, text, photoURL, uid, createdAt }) => (
-          <div key={id}>
-            <p>{text}</p>
-          </div>
-        ))
-      ) : (
-        <h2>Loading...</h2>
-      )}
-      <SendMessages />
+    <div className="chat">
+      <div className="leftChat">
+        <h1>hello</h1>
+      </div>
+      <div className="rightChat">
+        <button onClick={() => auth.signOut()}>Sign Out</button>
+        <div className="chatWindow">
+          {messages ? (
+            messages.map(({ id, text, photoURL, uid, createdAt }) => (
+              <div
+                key={id}
+                className={`messages ${
+                  uid === auth.currentUser.uid ? "sent" : "received"
+                }`}
+              >
+                <img src={photoURL} alt="" />
+                <div className="innerMessages">
+                  <h3>{firebase.auth().currentUser.displayName}</h3>
+                  <p>{text}</p>
+                </div>
+              </div>
+            ))
+          ) : (
+            <h2>Loading...</h2>
+          )}
+        </div>
+        <SendMessages />
+      </div>
     </div>
   );
 }
