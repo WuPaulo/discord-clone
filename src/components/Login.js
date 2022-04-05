@@ -13,7 +13,7 @@ const Login = () => {
         <img src="" alt="" />
         <h1>React-Firebase Chat</h1>
         <button onClick={googleSignIn}>Sign In</button>
-        <p>Use your Google Account</p>
+        <p>Log in with Google</p>
       </div>
     </div>
   );
