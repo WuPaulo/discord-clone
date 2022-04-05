@@ -172,6 +172,8 @@ h3 {
   color: white;
 }
 
+/* login component styling */
+
 .loginContainers {
   height: 100vh;
   display: flex;
@@ -187,6 +189,22 @@ h3 {
   text-align: center;
 }
 
+.innerLoginContainer {
+  margin: 10px;
+}
+
 .innerLoginContainer button {
-  margin: 5px;
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.innerLoginContainer button p {
+  color: #000;
+}
+
+.innerLoginContainer img {
+  margin-right: 10px;
+  height: 30px;
 }

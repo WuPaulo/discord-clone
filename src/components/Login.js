@@ -10,9 +10,14 @@ const Login = () => {
   return (
     <div className="loginContainers">
       <div className="innerLoginContainer">
-        <img src="" alt="" />
         <h1>React-Firebase Chat</h1>
-        <button onClick={googleSignIn}>Sign In</button>
+        <button onClick={googleSignIn}>
+          <img
+            src="https://img.icons8.com/color/48/000000/google-logo.png"
+            alt="google icon"
+          />
+          <p>Sign In</p>
+        </button>
         <p>Log in with Google</p>
       </div>
     </div>
