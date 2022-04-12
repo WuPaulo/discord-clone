@@ -23,7 +23,7 @@ const SendMessages = () => {
   }
 
   return (
-    <div>
+    <div className="sendMessages">
       <form onSubmit={submitMessage}>
         <input
           value={currentMessage}

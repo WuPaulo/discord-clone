@@ -15,9 +15,12 @@ function Chat() {
     <div className="chat">
       <div className="leftChat">
         <h1>hello</h1>
+        <button onClick={() => auth.signOut()}>Sign Out</button>
       </div>
       <div className="rightChat">
-        <button onClick={() => auth.signOut()}>Sign Out</button>
+        <div className="chatHeader">
+          <h2>React Firebase chat</h2>
+        </div>
         <div className="chatWindow">
           {messages ? (
             messages.map(({ id, text, photoURL, uid, createdAt }) => (
