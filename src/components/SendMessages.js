@@ -7,13 +7,14 @@ const SendMessages = () => {
 
   async function submitMessage(e) {
     e.preventDefault();
-    const { uid, photoURL } = auth.currentUser;
+    const { uid, photoURL, displayName } = auth.currentUser;
 
     if (currentMessage.length) {
       await db.collection("messages").add({
         text: currentMessage,
         photoURL,
         uid,
+        displayName,
         createdAt: firebase.firestore.FieldValue.serverTimestamp(),
       });
     } else {
