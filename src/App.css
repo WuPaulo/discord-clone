@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&family=Open+Sans&family=PT+Sans&family=Raleway:wght@900&display=swap");
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -7,6 +8,7 @@ html {
 body {
   margin: 0;
   background-color: #23272a;
+  font-family: "Merriweather Sans";
 }
 article,
 aside,
@@ -215,13 +217,23 @@ h3 {
 }
 
 /* chat styling when logged in */
+
+.chatHeader {
+  display: flex;
+  align-items: center;
+}
+
+.chatHeader {
+  padding: 20px;
+}
+
 .chat {
   height: 100vh;
   display: flex;
 }
 
 .leftChat {
-  width: 20vw;
+  width: 250px;
 }
 
 .rightChat {
@@ -262,6 +274,20 @@ h3 {
   border-radius: 50%;
 }
 
+.leftChat {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.leftChat img {
+  width: 150px;
+  border-radius: 50%;
+}
+
+.leftChat h2 {
+  margin: 10px 0;
+}
+
 /* input box styling for sending messages */
 .sendMessages {
   height: 12%;
@@ -270,7 +296,6 @@ h3 {
 
 form {
   width: 100%;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -279,4 +304,9 @@ form {
 .sendMessages form input {
   margin: 5px;
   width: 80%;
+}
+
+.sendMessages button {
+  color: white;
+  background-color: #404eed;
 }

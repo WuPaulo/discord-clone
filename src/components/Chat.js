@@ -14,7 +14,8 @@ function Chat() {
   return (
     <div className="chat">
       <div className="leftChat">
-        <h1>hello</h1>
+        <img src={firebase.auth().currentUser.photoURL} alt="user profile" />
+        <h2>{firebase.auth().currentUser.displayName}</h2>
         <button onClick={() => auth.signOut()}>Sign Out</button>
       </div>
       <div className="rightChat">
