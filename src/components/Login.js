@@ -10,7 +10,12 @@ const Login = () => {
   return (
     <div className="loginContainers">
       <div className="innerLoginContainer">
-        <h1>React-Firebase Chat</h1>
+        <h1>
+          <span className="reactColor">React</span>-
+          <span className="fireColorOne">Fire</span>
+          <span className="fireColorTwo">base</span>{" "}
+          <span className="fireColorThree">Chat</span>
+        </h1>
         <button onClick={googleSignIn}>
           <img
             src="https://img.icons8.com/color/48/000000/google-logo.png"

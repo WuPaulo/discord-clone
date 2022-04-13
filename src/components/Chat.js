@@ -22,11 +22,19 @@ function Chat() {
       <div className="leftChat">
         <img src={firebase.auth().currentUser.photoURL} alt="user profile" />
         <h2>{firebase.auth().currentUser.displayName}</h2>
-        <button onClick={() => auth.signOut()}>Sign Out</button>
+        <button className="signOutBtn" onClick={() => auth.signOut()}>
+          Sign Out
+        </button>
       </div>
       <div className="rightChat">
         <div className="chatHeader">
-          <h2>React Firebase chat</h2>
+          <h2>
+            {" "}
+            <span className="reactColor">React</span>-
+            <span className="fireColorOne">Fire</span>
+            <span className="fireColorTwo">base</span>{" "}
+            <span className="fireColorThree">Chat</span>
+          </h2>
         </div>
         <div className="chatWindow">
           {messages ? (
@@ -34,7 +42,7 @@ function Chat() {
               ({ id, text, photoURL, uid, createdAt, displayName }) => (
                 // checking to see if its my own message
                 <div key={id} className="messages">
-                  <img src={photoURL} alt="" />
+                  <img src={photoURL} alt="display pic" />
                   <div className="innerMessages">
                     {firebase.auth().currentUser.displayName == displayName ? (
                       <h3 className="currentUser">

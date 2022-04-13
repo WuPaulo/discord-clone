@@ -216,6 +216,21 @@ h3 {
   height: 30px;
 }
 
+.reactColor {
+  color: #61dbfb;
+}
+
+.fireColorOne {
+  color: #ffa611;
+}
+
+.fireColorTwo {
+  color: #f6820d;
+}
+.fireColorThree {
+  color: #ffcb2b;
+}
+
 /* chat styling when logged in */
 
 .chatHeader {
@@ -317,4 +332,40 @@ form {
 .sendMessages button {
   color: white;
   background-color: #404eed;
+}
+
+/* media queries */
+
+@media only screen and (max-width: 768px) {
+  .leftChat {
+    width: 200px;
+  }
+
+  .leftChat img {
+    width: 100px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .chat {
+    display: block;
+    position: relative;
+  }
+
+  .rightChat {
+    height: 100vh;
+  }
+
+  .leftChat {
+    position: absolute;
+    visibility: hidden;
+    width: 100%;
+  }
+
+  .signOutBtn {
+    visibility: visible;
+    position: absolute;
+    top: 10%;
+    right: 5%;
+  }
 }
