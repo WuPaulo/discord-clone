@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/WuPaulo/discord-clone.git/static/css/main.124650dc.css",
+    "main.js": "/WuPaulo/discord-clone.git/static/js/main.7869aeb8.js",
+    "index.html": "/WuPaulo/discord-clone.git/index.html",
+    "main.124650dc.css.map": "/WuPaulo/discord-clone.git/static/css/main.124650dc.css.map",
+    "main.7869aeb8.js.map": "/WuPaulo/discord-clone.git/static/js/main.7869aeb8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.124650dc.css",
+    "static/js/main.7869aeb8.js"
+  ]
+}
