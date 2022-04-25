@@ -365,7 +365,8 @@ form {
   .signOutBtn {
     visibility: visible;
     position: absolute;
-    top: 10%;
+    top: 15%;
     right: 5%;
+    padding: 5px;
   }
 }

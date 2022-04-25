@@ -44,7 +44,7 @@ function Chat() {
                 <div key={id} className="messages">
                   <img src={photoURL} alt="display pic" />
                   <div className="innerMessages">
-                    {firebase.auth().currentUser.displayName == displayName ? (
+                    {firebase.auth().currentUser.displayName === displayName ? (
                       <h3 className="currentUser">
                         {displayName}
                         {"   "}
